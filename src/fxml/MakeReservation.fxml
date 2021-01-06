@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bookPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" styleClass="paneBackground" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MakeReservationController">
+   <children>
+      <AnchorPane layoutX="269.0" layoutY="47.0" />
+      <Line endX="-25.599990844726562" endY="32.399993896484375" layoutX="25.0" layoutY="15.0" startX="-25.599990844726562" startY="-13.0" stroke="#f8e7e7" strokeWidth="0.2" />
+      <Pane layoutY="-1.0" prefHeight="686.0" prefWidth="86.0" styleClass="menuPane">
+         <children>
+            <Line endX="78.40000915527344" endY="95.86666870117188" layoutX="10.0" layoutY="-47.0" startX="-6.4000163078308105" startY="95.86666107177734" stroke="#744444" strokeWidth="0.2" />
+            <Button fx:id="btnManage111" contentDisplay="TOP" layoutY="182.0" mnemonicParsing="false" onAction="#ManageBooking" prefHeight="66.0" prefWidth="91.0" styleClass="buttonMenu" text="Manage" textFill="#8a6f6f">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/icons8_activity_feed_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnGuest111" contentDisplay="TOP" layoutX="1.0" layoutY="243.0" mnemonicParsing="false" onAction="#Guest" prefHeight="66.0" prefWidth="91.0" styleClass="buttonMenu" text="Guest" textFill="WHITE">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/icons8_person_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnBook111" contentDisplay="TOP" layoutY="114.0" mnemonicParsing="false" onAction="#BookRoom" prefHeight="66.0" prefWidth="86.0" styleClass="buttonGradient" text="Book" textFill="#f0eded">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/icons8_plus_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnLogout111" contentDisplay="TOP" layoutX="3.0" layoutY="367.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="66.0" prefWidth="86.0" styleClass="buttonMenu" text="LogOut" textFill="WHITE">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/icons8_enter_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ButtonBar layoutX="30.0" layoutY="14.0" styleClass="buttonMenu" />
+            <Button fx:id="btnExpand" layoutX="24.0" layoutY="16.0" mnemonicParsing="false" onAction="#menuExpand" prefHeight="26.0" prefWidth="43.0" styleClass="buttonTrans" textFill="#191515" />
+            <Button fx:id="btnInvoice111" contentDisplay="TOP" layoutY="308.0" mnemonicParsing="false" onAction="#Invoice" prefHeight="66.0" prefWidth="91.0" styleClass="buttonMenu" text="Invoice" textFill="WHITE">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/icons8_paycheque_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnMain" contentDisplay="TOP" layoutY="58.0" mnemonicParsing="false" onAction="#Main" prefHeight="56.0" prefWidth="86.0" styleClass="buttonMenu" text="Dashboard" textFill="#f0eded">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="26.0">
+                     <image>
+                        <Image url="@../icons/icons8_dashboard_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="18.0" fitWidth="24.0" layoutX="34.0" layoutY="20.0">
+               <image>
+                  <Image url="@../icons/icons8_menu_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="expandedMenu" layoutX="-3.0" layoutY="-1.0" prefHeight="686.0" prefWidth="178.0" styleClass="menuPane" AnchorPane.leftAnchor="-3.0" AnchorPane.topAnchor="-3.0">
+         <children>
+            <Line endX="155.3999786376953" endY="98.5999755859375" layoutX="23.0" layoutY="-56.0" startX="-23.000011444091797" startY="98.5999755859375" stroke="#744444" strokeWidth="0.2" />
+            <Label layoutX="37.0" layoutY="14.0" styleClass="buttonMenu" text="MENU" textFill="#191612" />
+            <Button fx:id="btnBook111" graphicTextGap="8.0" layoutX="3.0" layoutY="102.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="178.0" styleClass="buttonGradient" text="     Book Room" textFill="#f0eded" />
+            <Button fx:id="btnManage111" graphicTextGap="0.0" layoutX="3.0" layoutY="156.0" mnemonicParsing="false" onAction="#ManageBooking" prefHeight="56.0" prefWidth="178.0" styleClass="buttonMenu" text="         Manage Room" textFill="#8a6f6f" />
+            <Button fx:id="btnGuest111" graphicTextGap="1.0" layoutX="-1.0" layoutY="217.0" mnemonicParsing="false" onAction="#Guest" prefHeight="56.0" prefWidth="188.0" styleClass="buttonMenu" text="              Guest Information" textFill="WHITE" />
+            <Button fx:id="btnInvoice111" graphicTextGap="0.0" layoutX="5.0" layoutY="271.0" mnemonicParsing="false" onAction="#Invoice" prefHeight="56.0" prefWidth="178.0" styleClass="buttonMenu" text="      View Invoice" textFill="WHITE" />
+            <Button fx:id="btnLogout111" layoutX="-1.0" layoutY="331.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="56.0" prefWidth="188.0" styleClass="buttonMenu" text="Log Out" textFill="WHITE" />
+            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="150.0" layoutY="14.0">
+               <image>
+                  <Image url="@../icons/icons8_menu_24px.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnCollapse" layoutX="141.0" layoutY="9.0" mnemonicParsing="false" onAction="#menuCollapse" prefHeight="26.0" prefWidth="34.0" styleClass="buttonTrans" textFill="#191515" />
+            <ImageView layoutX="38.0" layoutY="171.0">
+               <image>
+                  <Image url="@../icons/icons8_activity_feed_24px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="37.0" layoutY="231.0">
+               <image>
+                  <Image url="@../icons/icons8_person_24px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="38.0" layoutY="287.0">
+               <image>
+                  <Image url="@../icons/icons8_paycheque_24px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="37.0" layoutY="349.0">
+               <image>
+                  <Image url="@../icons/icons8_enter_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="38.0" layoutY="118.0">
+               <image>
+                  <Image url="@../icons/icons8_plus_24px_1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnMain" graphicTextGap="0.0" layoutX="3.0" layoutY="46.0" mnemonicParsing="false" onAction="#Main" prefHeight="56.0" prefWidth="178.0" styleClass="buttonMenu" text="     Dashboard" textFill="#8a6f6f" />
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="37.0" layoutY="62.0">
+               <image>
+                  <Image url="@../icons/icons8_dashboard_50px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TabPane fx:id="bookTabPane" layoutX="178.0" layoutY="10.0" prefHeight="639.0" prefWidth="980.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="10.0">
+        <tabs>
+            <Tab fx:id="searchTab" closable="false" text="1.  Search Available Room">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="530.0" prefWidth="966.0">
+                     <children>
+                        <Pane fx:id="searchPane" layoutX="73.0" layoutY="19.0">
+                           <children>
+                              <DatePicker fx:id="dateCheckIn" layoutY="3.0" opacity="0.49" prefHeight="13.0" prefWidth="110.0" promptText="check-in" />
+                              <DatePicker fx:id="dateCheckout" layoutX="140.0" layoutY="3.0" opacity="0.49" prefHeight="13.0" prefWidth="110.0" promptText="check-out" />
+                              <Button fx:id="btnSearchRoom" layoutX="396.0" mnemonicParsing="false" onAction="#searchRoom" prefHeight="32.0" prefWidth="110.0" styleClass="buttonAction" stylesheets="@Main.css" text="Search" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="twinPane" disable="true" layoutX="59.0" layoutY="196.0" prefHeight="90.0" prefWidth="860.0" styleClass="paneReflect">
+                           <children>
+                              <Label layoutX="162.0" styleClass="textHeader" text="Room Type: Twin bed" />
+                              <Label layoutX="162.0" layoutY="18.0" text="Price: RM100" />
+                              <ImageView fitHeight="94.0" fitWidth="150.0" layoutY="-3.0">
+                                 <image>
+                                    <Image url="@../icons/twinbed.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="162.0" layoutY="39.0" text="Capacity:" />
+                              <Group layoutX="225.0" layoutY="40.0">
+                                 <children>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="18.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="36.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="54.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Group>
+                              <Group layoutX="620.0" layoutY="30.0">
+                                 <children>
+                                    <Label layoutY="4.0" text="Room ID: " />
+                                    <ComboBox fx:id="cmbTwin" layoutX="80.0" onAction="#TSelected" prefHeight="1.0" prefWidth="118.0" />
+                                 </children>
+                              </Group>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="FamPane" disable="true" layoutX="59.0" layoutY="324.0" prefHeight="90.0" prefWidth="860.0" styleClass="paneReflect">
+                           <children>
+                              <Label layoutX="162.0" layoutY="7.0" styleClass="textHeader" text="Room Type: Family Room" />
+                              <Label layoutX="162.0" layoutY="25.0" text="Price: RM100" />
+                              <ImageView fitHeight="94.0" fitWidth="150.0">
+                                 <image>
+                                    <Image url="@../icons/family%20room-rounded.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="162.0" layoutY="45.0" text="Capacity:" />
+                              <Group layoutX="225.0" layoutY="44.0">
+                                 <children>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="18.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="36.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="54.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Group>
+                              <Group layoutX="624.0" layoutY="20.0">
+                                 <children>
+                                    <Label layoutY="5.0" text="Room ID: " />
+                                    <ComboBox fx:id="cmbFamily" layoutX="80.0" layoutY="1.0" onAction="#FamSelected" prefHeight="1.0" prefWidth="118.0" />
+                                 </children>
+                              </Group>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="VIPPane" disable="true" layoutX="59.0" layoutY="446.0" prefHeight="90.0" prefWidth="860.0" styleClass="paneReflect">
+                           <children>
+                              <Label layoutX="162.0" layoutY="14.0" styleClass="textHeader" text="Room Type: VIP suite" />
+                              <Label layoutX="162.0" layoutY="32.0" text="Price: RM200" />
+                              <ImageView fitHeight="94.0" fitWidth="150.0">
+                                 <image>
+                                    <Image url="@../icons/vip%20room-rounded.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="161.0" layoutY="56.0" text="Capacity:" />
+                              <Group layoutX="225.0" layoutY="57.0">
+                                 <children>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="18.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Group>
+                              <Group layoutX="629.0" layoutY="28.0">
+                                 <children>
+                                    <Label layoutY="4.0" text="Room ID: " />
+                                    <ComboBox fx:id="cmbVIP" layoutX="79.0" onAction="#Vselected" prefHeight="1.0" prefWidth="118.0" />
+                                 </children>
+                              </Group>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="queenPane" disable="true" layoutX="59.0" layoutY="74.0" prefHeight="90.0" prefWidth="860.0" styleClass="paneReflect">
+                           <children>
+                              <Group layoutX="620.0" layoutY="34.0">
+                                 <children>
+                                    <Label layoutY="4.0" text="Room ID: " />
+                                    <ComboBox fx:id="cmbQueen" layoutX="79.0" onAction="#QSelected" prefHeight="1.0" prefWidth="118.0" />
+                                 </children>
+                              </Group>
+                              <ImageView fitHeight="94.0" fitWidth="150.0">
+                                 <image>
+                                    <Image url="@../icons/queenbed.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="162.0" layoutY="63.0" text="Capacity:" />
+                              <Label layoutX="162.0" layoutY="20.0" styleClass="textHeader" text="Room Type: Queen sized" />
+                              <Label layoutX="162.0" layoutY="42.0" text="Price: -" />
+                              <Group layoutX="225.0" layoutY="64.0">
+                                 <children>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="18.0">
+                                       <image>
+                                          <Image url="@../icons/icons8_user_24px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Group>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="cancelPane" disable="true" layoutX="604.0" layoutY="548.0">
+                           <children>
+                              <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#cancelSelection" prefHeight="32.0" prefWidth="130.0" styleClass="buttonAction" text="Cancel" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="nextPane" disable="true" layoutX="789.0" layoutY="547.0">
+                           <children>
+                              <Button fx:id="btnNextBook" mnemonicParsing="false" onAction="#goToBookTab" prefHeight="32.0" prefWidth="130.0" styleClass="buttonAction" text="Next" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab fx:id="bookTab" disable="true" text="2. Booking details">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="567.0" prefWidth="899.0">
+                     <children>
+                        <Pane prefHeight="147.0" prefWidth="714.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                           <children>
+                              <Group layoutY="-2.0" />
+                              <TextField fx:id="txtBookingID" disable="true" editable="false" layoutX="125.0" layoutY="90.0" prefHeight="25.0" prefWidth="77.0" />
+                              <Label layoutX="45.0" layoutY="90.0" text="Booking ID" />
+                              <Label layoutX="37.0" layoutY="37.0" styleClass="buttonTrans" text="Booking details" />
+                              <TextField fx:id="txtName" layoutX="121.0" layoutY="242.0" prefWidth="120.0" />
+                              <Label layoutX="38.0" layoutY="246.0" text="Name" />
+                              <Label layoutX="38.0" layoutY="159.0" styleClass="buttonTrans" text="Guest Information" />
+                              <Label layoutX="37.0" layoutY="290.0" text="IC/Passport" />
+                              <TextField fx:id="txtICPASS" layoutX="123.0" layoutY="286.0" prefWidth="120.0" />
+                              <TextField fx:id="txtMobileNo" layoutX="123.0" layoutY="333.0" prefWidth="120.0" />
+                              <Label layoutX="37.0" layoutY="337.0" text="Mobile No" />
+                              <TextField fx:id="txtEmail" layoutX="123.0" layoutY="374.0" prefWidth="120.0" />
+                              <Label layoutX="44.0" layoutY="378.0" text="Email" />
+                              <TextField fx:id="txtAddress" layoutX="123.0" layoutY="418.0" prefHeight="25.0" prefWidth="201.0" />
+                              <Label layoutX="37.0" layoutY="422.0" text="Address" />
+                              <TextField fx:id="txtRoomType" disable="true" layoutX="531.0" layoutY="90.0" prefHeight="25.0" prefWidth="77.0" />
+                              <Label layoutX="450.0" layoutY="90.0" text="Room Type" />
+                              <TextField fx:id="txtRoomID" disable="true" editable="false" layoutX="327.0" layoutY="90.0" prefHeight="25.0" prefWidth="77.0" />
+                              <Label layoutX="237.0" layoutY="90.0" text="Room ID" />
+                              <TextField fx:id="txtGuestID" disable="true" layoutX="123.0" layoutY="199.0" prefHeight="25.0" prefWidth="118.0" />
+                              <Label layoutX="38.0" layoutY="203.0" text="Guest ID" />
+                              <TextField fx:id="txtGuestID1" disable="true" layoutX="260.0" layoutY="199.0" prefHeight="25.0" prefWidth="118.0" visible="false" />
+                              <TextField fx:id="txtBookingID1" disable="true" editable="false" layoutX="125.0" layoutY="65.0" prefHeight="25.0" prefWidth="77.0" visible="false" />
+                              <Button fx:id="btnOldGuest" layoutX="64.0" layoutY="475.0" mnemonicParsing="false" onAction="#registerOldGuest" styleClass="buttonAction" text="Existing Guest?" />
+                              <Button fx:id="btnNextOldGuest" layoutX="327.0" layoutY="466.0" mnemonicParsing="false" onAction="#goToPaymentOldGuest" prefHeight="32.0" prefWidth="130.0" styleClass="buttonAction" text="Next" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="btnNextPay" layoutX="811.0" layoutY="514.0" mnemonicParsing="false" onAction="#goToPayment" prefHeight="32.0" prefWidth="130.0" styleClass="buttonAction" text="Next" />
+                        <TextField fx:id="txtDuration" disable="true" layoutX="749.0" layoutY="90.0" prefHeight="25.0" prefWidth="77.0" />
+                        <Label layoutX="661.0" layoutY="90.0" text="Stay Duration" />
+                        <Button fx:id="btnNewGuest" layoutX="201.0" layoutY="471.0" mnemonicParsing="false" onAction="#clearOldGuest" styleClass="buttonAction" text="New Guest?" visible="false" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="payTab" disable="true" text="3. Payment">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="554.0" prefWidth="971.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                           <children>
+                              <Group layoutY="-2.0" />
+                              <Pane fx:id="cardPane" disable="true" layoutX="447.0" layoutY="230.0">
+                                 <children>
+                                    <TextField fx:id="txtCardNo" layoutX="83.0" layoutY="49.0" prefWidth="120.0" />
+                                    <TextField fx:id="txtCVC" layoutX="88.0" layoutY="92.0" prefWidth="120.0" />
+                                    <Label layoutY="53.0" text="Card No" />
+                                    <Label layoutX="2.0" layoutY="96.0" text="CVC" />
+                                    <ComboBox fx:id="cmbCard" layoutX="306.0" layoutY="49.0" prefWidth="150.0" />
+                                    <Label layoutY="5.0" styleClass="buttonTrans" text="Credit card Information" />
+                                    <Label layoutX="236.0" layoutY="53.0" text="Card Type" />
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="cashPane" disable="true" layoutX="447.0" layoutY="122.0">
+                                 <children>
+                                    <TextField fx:id="txtTotalPaid" layoutX="90.0" layoutY="34.0" prefHeight="25.0" prefWidth="77.0" />
+                                    <Label layoutY="38.0" text="Total paid" />
+                                    <Label styleClass="buttonTrans" text="Cash" />
+                                    <Label layoutX="1.0" layoutY="76.0" />
+                                 </children>
+                              </Pane>
+                              <Button fx:id="btnPaySubmit" disable="true" layoutX="788.0" layoutY="455.0" mnemonicParsing="false" onAction="#goToInvoice" prefHeight="32.0" prefWidth="130.0" styleClass="buttonAction" text="Submit" />
+                              <Pane layoutX="81.0" layoutY="88.0" prefHeight="410.0" prefWidth="283.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <Label styleClass="buttonTrans" text="Payment details" />
+                                       </children>
+                                    </Group>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="173.0" layoutX="2.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.1" width="254.0" />
+                                    <Label layoutX="10.0" layoutY="170.0" text="Tourism Tax" />
+                                    <TextField fx:id="txtTourismTax" disable="true" layoutX="170.0" layoutY="170.0" prefHeight="25.0" prefWidth="77.0" />
+                                    <Label layoutX="10.0" layoutY="50.0" text="Total pay per night" />
+                                    <TextField fx:id="txtRates" disable="true" layoutX="170.0" layoutY="48.0" prefHeight="25.0" prefWidth="77.0" />
+                                    <Label layoutX="10.0" layoutY="130.0" text="Service Tax(10%)" />
+                                    <TextField fx:id="txtServiceTax" disable="true" layoutX="170.0" layoutY="131.0" prefHeight="25.0" prefWidth="77.0" />
+                                    <Label layoutX="5.0" layoutY="244.0" text="Total payable:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Label>
+                                    <TextField fx:id="txtTotalFee" disable="true" layoutX="165.0" layoutY="240.0" prefHeight="25.0" prefWidth="86.0" />
+                                    <Label layoutX="10.0" layoutY="90.0" text="Additional charges" />
+                                    <TextField fx:id="txtRoomPrice" disable="true" layoutX="170.0" layoutY="86.0" prefHeight="25.0" prefWidth="77.0" />
+                                 </children>
+                              </Pane>
+                              <Line endY="-381.0" layoutX="407.0" layoutY="372.0" startY="173.39996337890625" strokeWidth="0.2" />
+                              <RadioButton fx:id="radCash" layoutX="569.0" layoutY="50.0" mnemonicParsing="false" onAction="#confirmPayDetails" text="cash" />
+                              <Label layoutX="447.0" layoutY="50.0" text="Payment method">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <RadioButton fx:id="radCard" layoutX="641.0" layoutY="50.0" mnemonicParsing="false" onAction="#confirmPayDetails" prefHeight="18.0" prefWidth="100.0" text="credit card" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="invoiceTab" disable="true" text="4. Invoice">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="554.0" prefWidth="971.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" styleClass="paneTrans">
+                           <children>
+                              <Group layoutY="-2.0" />
+                              <Pane layoutX="64.0" layoutY="176.0" visible="false">
+                                 <children>
+                                    <TextField layoutX="83.0" layoutY="49.0" prefWidth="120.0" />
+                                    <TextField layoutX="88.0" layoutY="92.0" prefWidth="120.0" />
+                                    <Label layoutY="53.0" text="Card No" />
+                                    <Label layoutX="2.0" layoutY="96.0" text="CVC" />
+                                    <ComboBox layoutX="287.0" layoutY="57.0" prefWidth="150.0" style="-fx-background-color: ffffff;" />
+                                    <Label layoutY="5.0" styleClass="buttonTrans" text="Credit card Information" />
+                                    <Label layoutX="236.0" layoutY="53.0" text="Card Type" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="56.0" layoutY="176.0" />
+                              <Button fx:id="btnSave" layoutX="650.0" layoutY="477.0" mnemonicParsing="false" onAction="#InsertAllDetails" prefHeight="32.0" prefWidth="130.0" styleClass="buttonAction" text="Save" />
+                              <Button fx:id="btnPrint" layoutX="816.0" layoutY="479.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="130.0" styleClass="buttonAction" text="Print" />
+                              <TextArea fx:id="txtInvoice" editable="false" layoutX="49.0" layoutY="30.0" prefHeight="469.0" prefWidth="359.0">
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </TextArea>
+                              <Button fx:id="btnDisplayInvoice" layoutX="176.0" layoutY="252.0" mnemonicParsing="false" onAction="#displayInvoice" styleClass="buttonAction" text="Generate Invoice">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

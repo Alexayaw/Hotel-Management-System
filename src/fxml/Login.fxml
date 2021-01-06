@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="loginPane" prefHeight="680.0" prefWidth="1200.0" style="-fx-background-radius: 30px;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="680.0" fitWidth="1203.0">
+         <image>
+            <Image url="@../icons/pexels-anni-roenkae-3109807.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.57" />
+         </effect>
+      </ImageView>
+      <Pane layoutX="754.0" layoutY="85.0" prefHeight="490.0" prefWidth="450.0" style="-fx-background-color: #674172; -fx-background-radius: 30px;">
+         <children>
+            <Line endX="172.199951171875" layoutX="197.0" layoutY="184.0" startX="-100.0" stroke="#f2eeee" strokeWidth="0.2" />
+            <Line endX="170.5999755859375" layoutX="197.0" layoutY="249.0" startX="-100.0" stroke="#f2eeee" strokeWidth="0.2" />
+            <Button fx:id="btnLogin" layoutX="168.0" layoutY="310.0" mnemonicParsing="false" onAction="#Login" prefHeight="42.0" prefWidth="130.0" styleClass="buttonAction" stylesheets="@Main.css" text="Login">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="exitIcon" fitHeight="30.0" fitWidth="33.0" layoutX="405.0" layoutY="430.0" onMouseClicked="#exit">
+               <image>
+                  <Image url="@../icons/icons8_exit_104px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="loginStatus" layoutX="97.0" layoutY="267.0" text="Status" textFill="#fff6f6" visible="false" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <TextField fx:id="txtUserName" layoutX="846.0" layoutY="234.0" prefHeight="30.0" prefWidth="250.0" promptText="UserName" style="-fx-background-color: #1C00ff00; -fx-text-fill: ffffff;" />
+      <TextField fx:id="txtPassword" layoutX="845.0" layoutY="304.0" prefHeight="30.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: #1C00ff00; -fx-text-fill: ffffff;" />
+      <Label layoutX="851.0" layoutY="133.0" text="Log In" textFill="#fdf8f8">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="264.0" text="SAN MARINO HOTEL" textFill="#fdf8f8">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="278.0" layoutY="330.0" prefHeight="20.0" prefWidth="174.0" text="ROOM BOOKING SYSTEM" textFill="#fdf8f8">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

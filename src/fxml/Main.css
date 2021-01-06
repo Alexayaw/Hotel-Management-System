@@ -1,0 +1,160 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.tab-header-background {
+    -fx-background-color:ffffff00; /*transparent*/
+}
+
+.control-button-tab{
+    -fx-background-color: RED;
+}
+.headers-region { 
+    -fx-background-color:#D9ACFD40 ; 
+    
+}
+.textData{
+    
+   -fx-text-fill:#b486f4;
+}
+.textHeader{
+    -fx-font-weight:bold;
+}
+
+.roomPane{
+    -fx-background-color:#D9ACFD40; /*light purple*/
+}
+/*buttonMenu*/
+.buttonMenu {
+    -fx-background-color: ffffff00;
+/*    -fx-background-radius: 30 0 0 30;*/
+    -fx-text-fill:#000000;
+    
+    
+    
+}
+btnInvisible {
+    
+}
+btnInvisible:hover{
+    
+}
+.buttonMenu:hover {
+    -fx-background-color:linear-gradient(to right,#e4aad7 , #b486f4,#9DBFFD);
+/*    -fx-background-color:#D9ACFD;*/ /*light purple*/
+/* -fx-background-color:linear-gradient(to right, #e4aad7 0%, #db009a 2%, #b486f4 90%, #b486f4 100%);*/
+/*    -fx-background-radius: 30 0 0 30;*/
+/*   -fx-background-color:linear-gradient( to right ,#923993,#50D8D7);*/
+
+/*-fx-background-color: linear-gradient( to right,#f8ceec 0%, #a88beb 74%);*/ /*light purple*/
+ -fx-background-color:  ffffff40;
+
+}
+.buttonGradient{
+/*    -fx-background-color:linear-gradient(to right, #e4aad7 0%, #db009a 2%, #b486f4 90%, #b486f4 100%);*/
+     -fx-background-color:linear-gradient(to right,#e4aad7 , #b486f4,#9DBFFD);
+/*    -fx-background-radius: 30 0 0 30 ;*/
+     -fx-background-color:  ffffff;
+      -fx-text-fill:#000000;
+/*    -fx-font-weight: bold;*/
+}
+
+.buttonMenu:pressed {
+    -fx-background-color:ffffff;
+    
+}
+/*buttonAction*/
+.buttonAction{
+    -fx-background-color: ECECF1;
+    -fx-background-radius: 10 ;
+    -fx-text-fill:#000000; 
+}
+.buttonAction:hover {
+    -fx-background-color:linear-gradient(to right,#E8C3FD ,#86C5FC); 
+    -fx-background-radius: 10;
+    -fx-font-weight:bold;
+   
+}
+
+.buttonAction:pressed{
+    -fx-background-color:#660066;
+    -fx-background-radius: 10;
+    
+}
+/*pane Romms*/
+.paneBackground{
+    
+-fx-background-color: F8F8FD;
+  
+    -fx-text-fill:#000000; 
+}
+.menuPane{
+    -fx-background-color: linear-gradient( #E8C3FD ,#86C5FC); 
+   
+/* -fx-background-color:linear-gradient( #e4aad7 0%, #db009a 2%, #b486f4 90%, #b486f4 100%);*/
+                               
+
+/*-fx-background-color: linear-gradient( #9795ef , #f9c5d1 ); purple + pink*/
+
+
+/*-fx-background-color: linear-gradient( #a4508b 0%, #5f0a87 74%); obama resignination deep purple''
+                                
+/*transaprency : cc,40 / - ,40*/
+/*-fx-background-color: F8F8FD;*/
+/*    -fx-background-color: linear-gradient( #bf55ec , #86C5FC );*/
+
+
+    -fx-text-fill:#000000; 
+}
+
+.paneTrans{
+    -fx-background-color:  ffffffCC;
+    -fx-background-radius:30 ;
+    -fx-text-fill:#000000; 
+}
+
+.paneReflect{
+    -fx-background-color: ffffffCC ;
+    -fx-background-radius:30 ;
+    -fx-text-fill:#000000; 
+}
+
+
+.paneReflect:hover{
+    -fx-background-color: linear-gradient( #EAECED60 , #FFFCFC );
+    -fx-background-radius:30 ;
+    -fx-text-fill:#FFFFFF; 
+}
+
+.buttonReflect.hover{
+    -fx-background-color:  linear-gradient( #E8C3FDCC , #86C5FC );
+    -fx-background-radius:30 ;
+    -fx-text-fill:#FFFFFF; 
+}
+.buttonReflect.pressed{
+    -fx-background-color:  linear-gradient( #E8C3FDCC , #86C5FC );
+    -fx-background-radius:30 ;
+    -fx-text-fill:#FFFFFF; 
+}
+
+.buttonTrans{
+     -fx-background-color:  ffffff00;
+    -fx-background-radius:30 ;
+    -fx-text-fill:#000000; 
+    -fx-font-weight:bold;
+    
+}
+.buttonTrans:hover{
+     -fx-background-color:linear-gradient( #E8C3FDCC , #86C5FC )  ;
+  
+   
+    -fx-border-radius: 10;
+    -fx-text-fill:#ffffff; 
+}
+.paneWhite{
+    -fx-background-color: linear-gradient(to right,#e4aad740 , #b486f440,#9DBFFD40);
+/*    -fx-background-radius:0 ;*/
+    -fx-text-fill:#FFFFFF; 
+}
+
+

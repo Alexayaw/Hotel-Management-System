@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" styleClass="paneBackground" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <AnchorPane layoutX="269.0" layoutY="47.0" />
+      <ButtonBar layoutX="144.0" layoutY="41.0" prefHeight="41.0" prefWidth="125.0" />
+      <ImageView layoutX="332.0" layoutY="587.0">
+         <image>
+            <Image url="@../icons/icons8_exit_32px.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-6.0" layoutY="-8.0" prefHeight="689.0" prefWidth="86.0" styleClass="menuPane">
+         <children>
+            <Line endX="78.40000915527344" endY="95.86666870117188" layoutX="10.0" layoutY="-47.0" startX="-6.4000163078308105" startY="95.86666107177734" stroke="#744444" strokeWidth="0.2" />
+            <Button fx:id="btnInvoice11" layoutY="238.0" mnemonicParsing="false" onAction="#Invoice" prefHeight="66.0" prefWidth="91.0" styleClass="buttonMenu" textFill="WHITE" />
+            <Button fx:id="btnManage11" layoutY="112.0" mnemonicParsing="false" onAction="#ManageBooking" prefHeight="66.0" prefWidth="91.0" styleClass="buttonMenu" textFill="#8a6f6f" />
+            <Button fx:id="btnGuest11" layoutX="1.0" layoutY="173.0" mnemonicParsing="false" onAction="#Guest" prefHeight="66.0" prefWidth="91.0" styleClass="buttonMenu" textFill="WHITE" />
+            <Button fx:id="btnBook11" layoutY="52.0" mnemonicParsing="false" onAction="#BookRoom" prefHeight="66.0" prefWidth="86.0" styleClass="buttonMenu" textFill="#f0eded" />
+            <Button fx:id="btnLogout11" layoutX="3.0" layoutY="297.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="66.0" prefWidth="86.0" styleClass="buttonMenu" textFill="WHITE" />
+            <ButtonBar layoutX="30.0" layoutY="14.0" styleClass="buttonMenu" />
+            <Label layoutX="28.0" layoutY="85.0" text="Book" />
+            <Label layoutX="20.0" layoutY="145.0" text="Manage" textAlignment="CENTER" />
+            <Label layoutX="27.0" layoutY="206.0" text="Guest" />
+            <Label layoutX="22.0" layoutY="271.0" text="Receipt" />
+            <Label layoutX="22.0" layoutY="335.0" text="LogOut" />
+            <ImageView layoutX="30.0" layoutY="304.0">
+               <image>
+                  <Image url="@../icons/icons8_enter_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="32.0" layoutY="244.0">
+               <image>
+                  <Image url="@../icons/icons8_paycheque_24px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="30.0" layoutY="178.0">
+               <image>
+                  <Image url="@../icons/icons8_person_24px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="30.0" layoutY="120.0">
+               <image>
+                  <Image url="@../icons/icons8_activity_feed_24px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="30.0" layoutY="61.0">
+               <image>
+                  <Image url="@../icons/icons8_plus_24px_1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnExpand" layoutX="24.0" layoutY="16.0" mnemonicParsing="false" onAction="#menuExpand" prefHeight="26.0" prefWidth="43.0" styleClass="buttonTrans" textFill="#191515" />
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="34.0" layoutY="19.0">
+               <image>
+                  <Image url="@../icons/icons8_menu_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="expandedMenu" layoutX="-1.0" layoutY="-3.0" prefHeight="686.0" prefWidth="178.0" styleClass="menuPane" visible="false">
+         <children>
+            <Line endX="164.40000915527344" endY="95.86666107177734" layoutX="14.0" layoutY="-51.0" startX="-6.4000163078308105" startY="95.86666107177734" stroke="#744444" strokeWidth="0.2" />
+            <Label layoutX="37.0" layoutY="14.0" styleClass="buttonMenu" text="MENU" textFill="#191612" />
+            <Button fx:id="btnBook111" layoutX="-1.0" layoutY="54.0" mnemonicParsing="false" onAction="#BookRoom" prefHeight="56.0" prefWidth="178.0" styleClass="buttonMenu" text="   Book Room" textFill="#f0eded" />
+            <Button fx:id="btnManage111" layoutX="-1.0" layoutY="108.0" mnemonicParsing="false" onAction="#ManageBooking" prefHeight="56.0" prefWidth="178.0" styleClass="buttonMenu" text="        Manage Room" textFill="#8a6f6f" />
+            <Button fx:id="btnGuest111" layoutX="-5.0" layoutY="169.0" mnemonicParsing="false" onAction="#Guest" prefHeight="56.0" prefWidth="188.0" styleClass="buttonMenu" text="            Guest Information" textFill="WHITE" />
+            <Button fx:id="btnInvoice111" layoutX="1.0" layoutY="223.0" mnemonicParsing="false" onAction="#Invoice" prefHeight="56.0" prefWidth="178.0" styleClass="buttonMenu" text="   View Invoice" textFill="WHITE" />
+            <Button fx:id="btnLogout111" layoutX="-5.0" layoutY="283.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="56.0" prefWidth="188.0" styleClass="buttonMenu" text="Log Out" textFill="WHITE" />
+            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="150.0" layoutY="14.0">
+               <image>
+                  <Image url="@../icons/icons8_menu_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="26.0" layoutY="299.0">
+               <image>
+                  <Image url="@../icons/icons8_enter_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="25.0" layoutY="239.0">
+               <image>
+                  <Image url="@../icons/icons8_paycheque_24px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="25.0" layoutY="185.0">
+               <image>
+                  <Image url="@../icons/icons8_person_24px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="26.0" layoutY="124.0">
+               <image>
+                  <Image url="@../icons/icons8_activity_feed_24px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="26.0" layoutY="70.0">
+               <image>
+                  <Image url="@../icons/icons8_plus_24px_1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnCollapse" layoutX="141.0" layoutY="9.0" mnemonicParsing="false" onAction="#menuCollapse" prefHeight="26.0" prefWidth="34.0" styleClass="buttonTrans" textFill="#191515" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
